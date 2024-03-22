@@ -1,9 +1,8 @@
-<script setup lang="ts">
-import Card from '@/components/Card.vue';
+<script lang="ts" setup>
+import LayoutBase from '@/layout/layout-base.vue';
 </script>
 
 <template>
-  <Card />
+  <LayoutBase></LayoutBase>
 </template>
-
 <style scoped></style>
