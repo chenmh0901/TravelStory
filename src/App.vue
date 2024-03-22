@@ -1,9 +1,5 @@
-<script setup lang="ts">
-import Card from '@/components/Card.vue';
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <Card />
+  <router-view />
 </template>
-
-<style scoped></style>
