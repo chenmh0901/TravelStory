@@ -6,9 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "lint .",
+    "prettier": "prettier --write ."
   },
   "dependencies": {
+    "tailwindcss": "^3.4.1",
     "vue": "^3.4.21"
   },
   "devDependencies": {
