@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <router-view />
+  <div>这是map</div>
 </template>
+
+<style scoped></style>
