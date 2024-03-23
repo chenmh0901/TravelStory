@@ -1,6 +1,12 @@
 <script lang="ts" setup>
 import { Button } from 'ant-design-vue';
 import { UserOutlined } from '@ant-design/icons-vue';
+
+type Page = 'CardList' | 'MapView';
+
+const emit = defineEmits<{
+  (e: 'change-page', val: Page): void;
+}>();
 </script>
 <template>
   <a-layout>
@@ -13,8 +19,12 @@ import { UserOutlined } from '@ant-design/icons-vue';
         size="large"
       />
       <div class="menu">
-        <Button class="menu_btn">CardList</Button>
-        <Button>MapView</Button>
+        <Button class="menu_btn" @click="emit('change-page', 'CardList')"
+          >CardList</Button
+        >
+        <Button class="menu_btn" @click="emit('change-page', 'MapView')"
+          >MapView</Button
+        >
       </div>
       <a-avatar :size="36">
         <template #icon><UserOutlined /></template>
