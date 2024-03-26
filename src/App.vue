@@ -5,8 +5,13 @@ import Header from '@/components/header.vue';
 <template>
   <a-layout>
     <Header />
-    <a-layout-content :style="{ padding: '0 300px', marginTop: '64px' }">
+    <a-layout-content class="content">
       <router-view />
     </a-layout-content>
   </a-layout>
 </template>
+<style scoped>
+.content {
+  @apply px-[300px] mt-[64px] h-[1000px] py-2;
+}
+</style>
