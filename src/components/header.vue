@@ -13,8 +13,8 @@ const onSearch = () => {
       <template #prefix><SearchOutlined @click="onSearch" /></template>
     </a-input>
     <div class="menu">
-      <router-link to="/?home=cards"
-        ><a-button class="menu_btn" type="text">Cards</a-button></router-link
+      <router-link to="/?home=cards">
+        <a-button class="menu_btn" type="text">Cards</a-button></router-link
       >
       <router-link to="/?home=map"
         ><a-button class="menu_btn" type="text">Map</a-button></router-link
@@ -31,16 +31,16 @@ const onSearch = () => {
 
 <style scoped>
 .header {
-  @apply fixed top-0 w-full z-10 flex gap-6 items-center text-white px-[250px] bg-white;
+  @apply fixed top-0 w-full z-10 flex gap-6 items-center justify-center text-white  bg-white;
 }
 .menu {
   @apply h-[50px] flex items-center gap-6 ml-20 mr-5;
 }
 .menu_btn {
-  @apply text-black text-center h-[35px] border-0 rounded-full hover:bg-gray-300;
+  @apply text-black font-bold h-[35px] border-0 rounded-full hover:bg-gray-300;
 }
 .logo {
-  @apply w-[120px] h-[31px] mr-1.5 float-left;
+  @apply w-[120px] h-[31px] mr-1.5;
   background: rgba(110, 110, 255, 0.2);
 }
 </style>
