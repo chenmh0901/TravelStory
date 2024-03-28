@@ -12,7 +12,7 @@ const drawChinaMap = () => {
 
   const path = d3.geoPath(projection);
 
-  const g = svg.append('g');
+  svg.append('g');
 
   const provinces = svg.append('g').attr('class', 'provinces');
 
@@ -21,13 +21,13 @@ const drawChinaMap = () => {
     .data(chinaMap.features)
     .enter()
     .append('path')
-    .attr('d', path)
+    .attr('d', (d: any) => path(d))
     .attr('fill', '#000')
     .attr('stroke', '#333')
     .attr('stroke-width', 0.5)
     .attr(
       'fill',
-      (d: any, i: number) =>
+      (_: any, i: number) =>
         `rgba(38, 50, 56, ${(1 / chinaMap.features.length) * i})`
     );
 
@@ -40,16 +40,16 @@ const drawChinaMap = () => {
     .append('text')
     .attr('font-size', 10)
     .attr('text-anchor', 'middle')
-    .attr('x', (d) => {
+    .attr('x', (d: any) => {
       const center = d.properties.center || d.properties.centroid || [0, 0];
-      return projection(center)[0];
+      return projection(center)?.[0] ?? 0;
     })
-    .attr('y', (d) => {
+    .attr('y', (d: any) => {
       const center = d.properties.center || d.properties.centroid || [0, 0];
-      return projection(center)[1] - 10;
+      return projection(center)?.[1] ?? 0 - 10;
     })
     .attr('dy', '0.35em')
-    .text((d) => d.properties.name);
+    .text((d: any) => d.properties.name);
 
   const centers = svg.append('g').attr('class', 'centers');
 
@@ -58,13 +58,13 @@ const drawChinaMap = () => {
     .data(chinaMap.features)
     .enter()
     .append('circle')
-    .attr('cx', (d) => {
+    .attr('cx', (d: any) => {
       const center = d.properties.center || d.properties.centroid || [0, 0];
-      return projection(center)[0];
+      return projection(center)?.[0] ?? 0;
     })
-    .attr('cy', (d) => {
+    .attr('cy', (d: any) => {
       const center = d.properties.center || d.properties.centroid || [0, 0];
-      return projection(center)[1];
+      return projection(center)?.[1] ?? 0;
     })
     .attr('r', 3)
     .attr('fill', 'red');
