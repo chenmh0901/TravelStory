@@ -12,6 +12,6 @@ import Header from '@/components/header.vue';
 </template>
 <style scoped>
 .content {
-  @apply px-[300px] mt-[64px] h-[1000px] py-2;
+  @apply mt-[64px] h-[1000px] py-2 flex items-center justify-center;
 }
 </style>
