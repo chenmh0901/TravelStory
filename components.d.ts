@@ -7,18 +7,13 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
-    AApp: typeof import('ant-design-vue/es')['App']
     AAvatar: typeof import('ant-design-vue/es')['Avatar']
     AButton: typeof import('ant-design-vue/es')['Button']
     ACard: typeof import('ant-design-vue/es')['Card']
     ACardMeta: typeof import('ant-design-vue/es')['CardMeta']
     AInput: typeof import('ant-design-vue/es')['Input']
-    AInputSearch: typeof import('ant-design-vue/es')['InputSearch']
     ALayout: typeof import('ant-design-vue/es')['Layout']
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
-    ALayoutHeader: typeof import('ant-design-vue/es')['LayoutHeader']
-    AList: typeof import('ant-design-vue/es')['List']
-    APagination: typeof import('ant-design-vue/es')['Pagination']
     Card: typeof import('./src/components/card.vue')['default']
     Header: typeof import('./src/components/header.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
