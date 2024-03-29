@@ -8,11 +8,11 @@ enum ViewType {
   Map = 'map'
 }
 
-const viewType = useRouteQuery<ViewType>('home');
+const viewType = useRouteQuery<ViewType>('v');
 </script>
 
 <template>
-  <CardList v-if="viewType == ViewType.Cards || !viewType" />
-  <MapView v-if="viewType == ViewType.Map" />
+  <CardList v-if="viewType === ViewType.Cards || !viewType" />
+  <MapView v-if="viewType === ViewType.Map" />
 </template>
 <style scoped></style>

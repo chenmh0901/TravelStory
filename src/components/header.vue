@@ -13,13 +13,13 @@ const onSearch = () => {
       <template #prefix><SearchOutlined @click="onSearch" /></template>
     </a-input>
     <div class="menu">
-      <router-link to="/?home=cards">
+      <router-link :to="{ path: '/', query: { v: 'cards' } }">
         <a-button class="menu_btn" type="text">Cards</a-button></router-link
       >
-      <router-link to="/?home=map"
-        ><a-button class="menu_btn" type="text">Map</a-button></router-link
+      <router-link :to="{ path: '/', query: { v: 'map' } }">
+        <a-button class="menu_btn" type="text">Map</a-button></router-link
       >
-      <router-link to="/upload"
+      <router-link :to="{ path: '/upload' }"
         ><a-button class="menu_btn" type="text">Upload</a-button>
       </router-link>
     </div>
