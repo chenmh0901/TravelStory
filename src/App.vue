@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import Header from '@/components/header.vue';
+import Nav from '@/components/navigator.vue';
 </script>
 
 <template>
   <a-layout>
-    <Header />
+    <Nav />
     <a-layout-content class="content">
       <router-view />
     </a-layout-content>
