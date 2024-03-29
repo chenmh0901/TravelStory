@@ -16,7 +16,10 @@ declare module 'vue' {
     ALayoutContent: typeof import('ant-design-vue/es')['LayoutContent']
     Card: typeof import('./src/components/card.vue')['default']
     Header: typeof import('./src/components/header.vue')['default']
+    Map: typeof import('./src/components/map/index.vue')['default']
+    Navigator: typeof import('./src/components/navigator.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Story: typeof import('./src/components/story.vue')['default']
   }
 }

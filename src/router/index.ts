@@ -1,11 +1,17 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import Home from '@/pages/home/index.vue';
+import Stories from '@/pages/stories/index.vue';
 import Upload from '@/pages/upload/index.vue';
+import Detail from '@/pages/detail/index.vue';
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: Home
+    name: 'Stories',
+    component: Stories
+  },
+  {
+    path: '/detail/:id?/:type?',
+    name: 'Detail',
+    component: Detail
   },
   {
     path: '/upload',

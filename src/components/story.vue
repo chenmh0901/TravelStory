@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import image from '@/assets/image.png';
 import { computed } from 'vue';
+import image from '@/assets/image.png';
 
+interface IProps {
+  id: string;
+}
+defineProps<IProps>();
 const mockRandomAvatar = computed(() => {
   if (Math.random() > 0.5) {
     console.log(`123`);
