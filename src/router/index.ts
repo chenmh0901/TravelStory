@@ -9,7 +9,7 @@ const routes = [
     component: Stories
   },
   {
-    path: '/detail/:id?/:type?',
+    path: '/detail/:id/:type?',
     name: 'Detail',
     component: Detail
   },
