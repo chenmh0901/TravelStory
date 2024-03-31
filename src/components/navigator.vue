@@ -42,6 +42,6 @@ const onSearch = () => {
   @apply text-black font-bold h-[35px] border-0 rounded-full hover:bg-gray-300;
 }
 .logo {
-  @apply flex flex-row gap-1 mr-1.5;
+  @apply flex flex-row gap-3 mr-1.5;
 }
 </style>
