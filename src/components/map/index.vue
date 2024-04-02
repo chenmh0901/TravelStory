@@ -7,7 +7,7 @@ onMounted(() => drawChinaMap(svgMap.value));
 </script>
 
 <template>
-  <svg ref="svgMap"></svg>
+  <svg ref="svgMap" />
 </template>
 
 <style scoped></style>
