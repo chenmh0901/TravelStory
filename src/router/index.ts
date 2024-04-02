@@ -5,6 +5,10 @@ import Detail from '@/pages/detail/index.vue';
 const routes = [
   {
     path: '/',
+    redirect: '/stories'
+  },
+  {
+    path: '/stories',
     name: 'Stories',
     component: Stories
   },
