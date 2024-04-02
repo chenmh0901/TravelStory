@@ -1,5 +1,4 @@
 module.exports = {
-  root: true,
   env: {
     browser: true,
     es2021: true
@@ -7,8 +6,7 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:vue/vue3-essential',
-    'prettier'
+    'plugin:vue/vue3-essential'
   ],
   overrides: [
     {
@@ -26,13 +24,14 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     sourceType: 'module'
   },
-  plugins: ['@typescript-eslint', 'vue', 'prettier'],
+  plugins: ['@typescript-eslint', 'vue'],
   rules: {
-    'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    '@typescript-eslint/no-explicit-any': 'off',
-    'vue/no-deprecated-slot-attribute': 'off',
-    'vue/component-name-in-template-casing': ['error', 'PascalCase'],
-    'vue/multi-word-component-names': 'off'
+    'vue/multi-word-component-names': [
+      'error',
+      {
+        ignores: ['navigator']
+      }
+    ],
+    '@typescript-eslint/no-explicit-any': 'off'
   }
 };

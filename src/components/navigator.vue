@@ -15,7 +15,9 @@ const onSearch = () => {
       </div>
     </router-link>
     <a-input class="w-[250px] mx-4 text-start" placeholder="Search">
-      <template #prefix><SearchOutlined @click="onSearch" /></template>
+      <template #prefix>
+        <SearchOutlined @click="onSearch" />
+      </template>
     </a-input>
     <div class="menu">
       <router-link :to="{ path: '/', query: { v: 'stories' } }">
@@ -26,21 +28,26 @@ const onSearch = () => {
       </router-link>
     </div>
     <a-avatar :size="36">
-      <template #icon><UserOutlined /></template>
+      <template #icon>
+        <UserOutlined />
+      </template>
     </a-avatar>
   </header>
 </template>
 
 <style scoped>
 .navigator {
-  @apply fixed top-0 w-full z-10 flex gap-12 items-center justify-center text-white  bg-white;
+  @apply fixed top-0 w-full z-10 flex gap-12 items-center justify-center text-white bg-white;
 }
+
 .menu {
   @apply h-[50px] flex items-center gap-6 mr-5;
 }
+
 .menu_btn {
   @apply text-black font-bold h-[35px] border-0 rounded-full hover:bg-gray-300;
 }
+
 .logo {
   @apply flex flex-row gap-3 mr-1.5;
 }
