@@ -20,11 +20,9 @@ const onSearch = () => {
       </template>
     </a-input>
     <div class="menu">
-      <router-link :to="{ path: '/', query: { v: 'stories' } }">
-        <a-button class="menu_btn" type="text">日记</a-button></router-link
-      >
-      <router-link :to="{ path: '/upload' }"
-        ><a-button class="menu_btn" type="text">上传</a-button>
+      <router-link :to="{ path: '/stories' }">
+        <a-button class="menu_btn" type="text">日记</a-button></router-link>
+      <router-link :to="{ path: '/upload' }"><a-button class="menu_btn" type="text">上传</a-button>
       </router-link>
     </div>
     <a-avatar :size="36">
