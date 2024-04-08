@@ -1,13 +1,17 @@
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import { drawChinaMap } from './chinamap';
+import { onMounted } from 'vue';
+import { mountMap } from 'traveler-map';
 
-const svgMap = ref();
-onMounted(() => drawChinaMap(svgMap.value));
+onMounted(() => mountMap('map'));
 </script>
 
 <template>
-  <svg ref="svgMap" />
+  <div id="map"></div>
 </template>
 
-<style scoped></style>
+<style scoped>
+#map {
+  width: 1500px;
+  height: 1000px;
+}
+</style>

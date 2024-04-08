@@ -23,9 +23,9 @@ export const drawChinaMap = (castTargetSvg: HTMLElement) => {
     .attr(
       'fill',
       (_: any, i: number) =>
-        `rgba(38, 50, 56, ${(1 / mapJson.features.length) * i})`
+        `rgba(38, 50, 56, 
+${(1 / mapJson.features.length) * i})`
     );
-
   const labels = svg.append('g').attr('class', 'labels');
 
   labels
